@@ -18,10 +18,8 @@ First, I needed to make sure the app would run with PostgreSQL. The changes to b
 When the database and user had been made, the last step was:
 
 5. Changing `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`
------ 
-#### The app now works with PostgreSQL
 
-This is a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly.
+This was a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly.
 
 -------- 
 
@@ -34,7 +32,7 @@ Go to digitalocean.com and create a droplet with Ubuntu 14.04, wait for it to de
 - Copy the temporary password from the email you received at droplet creation
 ```bash
 ssh root@servername
-< temporary password>
+< temporary password >
 adduser < user >
 gpasswd -a < user > sudo
 sudo cp /etc/sudoers.d/90-cloud-initusers /etc/sudoers.d/< user >
