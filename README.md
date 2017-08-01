@@ -5,7 +5,7 @@ The ssh key for grader is given at project submission.
 
 ## This readme is a guide to deploying your own instance of my [ItemCatalog-FSND project](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
 
-First, I needed to make sure the app would run with PostgreSQL. The changes needed to be made weren't that big: 
+First, I needed to make sure the app would run with PostgreSQL. The changes to be made weren't that big: 
 - Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
 - Make sure that all paths are absolute and configured for a Linux OS 
 - Make sure the items table's foreign keys references unique columns.
