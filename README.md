@@ -86,9 +86,8 @@ sudo apt-get -y install git
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y autoremove
-sudo a2enmod wsgi
 ```
-**To confirm everything is working as it should so far, go to your servers ip-address and see if the default apache page is displaying, if nothing displays, install apache2 and libapache2-mod-wsgi again, then see. If nothing still shows up, start over.**
+**To confirm everything is working as it should so far, go to your browser and ther your servers ip-address and see if the default apache page is there, if nothing displays, run above commands again. If nothing still shows up you should start over.**
 
 ## Setting up PostgreSQL
 ```bash
@@ -127,9 +126,11 @@ source venv/bin/activate
 sudo pip install -r requirements.txt
 deactivate
 ```
-**Then we'll enable the app, first:**
-
-Run `sudo nano /etc/apache2/sites-available/catalog.conf`
+**Then we'll enable the app, first run:**
+```bash
+sudo a2enmod wsgi
+sudo nano /etc/apache2/sites-available/catalog.conf
+```
 
 **Then paste the following code into catalog.conf**
 ```
