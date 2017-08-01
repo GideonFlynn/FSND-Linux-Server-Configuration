@@ -44,7 +44,7 @@ inside the sudoers.d/grader change the word `root` to `< user >`
 
 
 - Locally run `ssh-keygen`, name the key by saving it to your default .ssh directory
-- Locally run `cat ~/.ssh/< rsa-key-name >.pub` and copy it
+- Locally run `cat ~/.ssh/< RSA-key-name >.pub` and copy it
 
 **On the server as root user**
 ```bash
@@ -92,8 +92,8 @@ sudo a2enmod wsgi
 ## Setting up PostgreSQL
 ```bash
 sudo su postgres
-createuser --interactive -W -P < db-username >
-createdb -O < db-owner > < db-name >
+createuser --interactive -W -P < DB-username >
+createdb -O < DB-owner > < DB-name >
 exit
 ```
 Whenever you make a change to the configuration of most services in Linux, you will have to restart them for the change to take effect. For now, use these commands:
