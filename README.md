@@ -10,9 +10,9 @@ First, I needed to make sure the app would run with PostgreSQL. The changes to b
 2. Make sure that all paths are absolute and configured for a Linux OS 
 3. Make sure the items table's foreign keys references unique columns.
   
-  - Before both the shop and manufacturer table had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name')
+  - _Before the shop and manufacturer tables had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name'_
 
-**This means that when defining a manufacturer when making an item, you type their name.**
+  **This means that when defining a manufacturer when making an item, you type their name.**
 
 4. Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
 
