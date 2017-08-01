@@ -23,7 +23,8 @@ _This was a great time to test everything in the app and make sure nothing break
 
 -------- 
 _The following guide assumes you are redicreting your DNS-provider's nameservers to DigitalOcean_
-Setting up the DNS on DigitaOcean is as simple as:
+
+Setting up DNS on DigitaOcean is as simple as:
 - Going to the network tab
 - Enter the domain
 - Declare your favorite DNS records, mine are:
