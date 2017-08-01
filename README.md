@@ -87,7 +87,7 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y autoremove
 ```
-**To confirm everything is working as it should so far, go to your browser and ther your servers ip-address and see if the default apache page is there, if nothing displays, run above commands again. If nothing still shows up you should start over.**
+**To confirm everything is working as it should so far: go to your browser, enter your servers ip-address and see if the default apache page is there. If nothing displays, run above commands again. If nothing still shows up you should start over.**
 
 ## Setting up PostgreSQL
 ```bash
