@@ -220,12 +220,13 @@ To                         Action      From
 - Select UTC
 
 # Reboot!
-After initial configuration, it would be a good idea to run
-- `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
-
-- Run `reboot` 
+After initial configuration, it would be a good idea to reboot:
+- Run `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
+- Then `reboot` 
 - Login as < user > again
-- Run `sudo apache2ctl restart`
-- Run  `cd /var/www/flaskapps/`
-- Run `sudo rm -r -f ItemCatalog-FSND/`
+  ```
+sudo apache2ctl restart
+cd /var/www/flaskapps/
+sudo rm -r -f ItemCatalog-FSND/
+  ```
 #### In your browser, go to the serveralias you defined in catalog.conf and enjoy!
