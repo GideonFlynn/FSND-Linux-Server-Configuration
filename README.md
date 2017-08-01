@@ -37,8 +37,8 @@ ssh root@servername
 < temporary password>
 adduser < user >
 gpasswd -a < user > sudo
-sudo cp /etc/sudoers.d/90-cloud-initusers /etc/sudoers.d/grader
-sudo nano /etc/sudoers.d/grader
+sudo cp /etc/sudoers.d/90-cloud-initusers /etc/sudoers.d/< user >
+sudo nano /etc/sudoers.d/< user >
 ```
 inside the sudoers.d/grader change the word `root` to `< user >`
   -  < user > can run commands with sudo privileges now!
