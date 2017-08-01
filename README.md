@@ -28,7 +28,7 @@ This is a great time to test everything in the app and make sure nothing breaks.
 # Setting up a DigitalOcean Server
 
 Go to digitalocean.com and create a droplet with Ubuntu 14.04, wait for it to deploy.
-
+## Configuring authorization
 - Open a bash terminal locally
   - On Windows: install git and use git-bash
 - Copy the temporary password from the email you received at droplet creation
