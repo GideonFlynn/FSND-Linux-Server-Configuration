@@ -3,7 +3,7 @@
 My instance is located [gideonservice.me](http://gideonservice.me/), with IP address 46.101.150.121.
 The ssh key for grader is given at project submission.
 
-## This readme is a guide to deploying your own instance of my [ItemCatalog-FSND project](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
+## This readme is a guide to deploying your own instance of the [ItemCatalog-FSND project](https://github.com/GideonFlynn/ItemCatalog-FSND) on DigitalOcean.
 
 First, I needed to make sure the app would run with PostgreSQL. The changes to be made weren't that big: 
 1. Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
@@ -22,7 +22,14 @@ First, I needed to make sure the app would run with PostgreSQL. The changes to b
 _This was a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly._
 
 -------- 
-
+_The following guide assumes you are redicreting your DNS-providers nameservers to DigitalOcean_
+Setting up the DNS on DigitaOcean is as simple as:
+- Going to the network tab
+- Enter the domain
+- Declare your favorite DNS records
+  - A record to gideonservice.me
+  - CNAME record Make any prefix redirect to gideonservice.me
+  - NS records to DigitalOcean
 # Setting up a DigitalOcean Server
 
 Go to digitalocean.com and create a droplet with Ubuntu 14.04, wait for it to deploy.
