@@ -2,6 +2,7 @@
 
 ## This readme is a guide to deploying your own instance of my [Item Catalog](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
 
+My instance is located [gideonservice.me](gideonservice.me), the IP address is 46.101.150.121 and the ssh key & password for grader is given at project submission.
 
 First, I made sure that ItemCatalog would run with PostgreSQL, to do that I read the documentation at SQLAlchemy, Flask, PostgreSQL, and psycopg2. The changes needed to be made weren't that big: 
 - Change all 'NVARCHAR' columns to 'Text'
@@ -35,9 +36,11 @@ ssh root@servername
 <temporary password>
 adduser <user>
 gpasswd -a <user> sudo
+sudo cp /etc/sudoers.d/90-cloud-initusers /etc/sudoers.d/grader
+sudo nano /etc/sudoers.d/grader
 ```
-
-  -  < user > can run commands with sudo privileges now!
+inside the sudoers.d/grader change the word `root` to `<user>`
+  -  <user> can run commands with sudo privileges now!
 
 
 - Locally run `ssh-keygen`, name the key by saving it to your default .ssh directory
@@ -66,9 +69,9 @@ exit (until current user is root)
   - Save and exit
 - Run `sudo service ssh restart`
 
-### Logging in as < user >
+### Logging in as <user>
 
-Locally, open bash and run `ssh <user>@<server-IP> -i ~/.ssh/<rsa-key-name>`
+Locally, open bash and run `ssh <user>@<server-IP> -p 2222 -i ~/.ssh/<rsa-key-name>`
 
 # Software installation
 Run the following commands:
@@ -217,7 +220,7 @@ Simply run `sudo dpkg-reconfigure tzdata` select 'None of these' with your arrow
 After all of this, it would be a good idea to run `apt-get update` and `apt-get upgrade` again.
 
 - Run `reboot` 
-- Login as < user > again
+- Login as <user> again
 - Run `sudo apache2ctl restart`
 - Run  `cd /var/www/flaskapps/`
 - Run `sudo rm -r -f ItemCatalog-FSND/`
