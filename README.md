@@ -42,7 +42,7 @@ Go to digitalocean.com and create a droplet with Ubuntu 14.04 and wait for it to
   - On Windows: install git and use git-bash
 - Copy the temporary password from the email you received at droplet creation
 ```bash
-ssh root@servername
+ssh root@< server IP-address >
 < temporary password >
 adduser < user >
 gpasswd -a < user > sudo
