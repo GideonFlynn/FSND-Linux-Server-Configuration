@@ -112,13 +112,8 @@ sudo cd /flaskapps
 sudo mkdir catalog
 sudo git clone https://github.com/GideonFlynn/ItemCatalog-FSND.git
 sudo mv /ItemCatalog-FSND/* /catalog/
-cd /flaskapps/catalog/
-sudo pip install virtualenv 
-sudo virtualenv venv
-source venv/bin/activate 
-sudo pip install -r requirements.txt
 ```
-_To remove the unused files (and the .git directory), run these commands:_
+_To remove unused files/folders (and the .git folder), run these commands:_
 ```bash
 cd /var/www/flaskapps/
 sudo rm -r -f ItemCatalog-FSND/
@@ -132,11 +127,11 @@ source venv/bin/activate
 sudo pip install -r requirements.txt
 deactivate
 ```
-Now we'll enable the app, first:
+**Then we'll enable the app, first:**
 
-`sudo nano /etc/apache2/sites-available/catalog.conf`
+Run `sudo nano /etc/apache2/sites-available/catalog.conf`
 
-Then paste the following code into catalog.conf
+**Then paste the following code into catalog.conf**
 ```
 <VirtualHost *:80>
                 ServerName < server-IP >
@@ -205,7 +200,7 @@ sudo ufw allow ntp
 sudo ufw enable (press 'y')
 sudo ufw status
 ```
-Now your terminal should display this text:
+_Now your terminal should display this text:_
 ```bash
 Status: active
 
@@ -226,10 +221,10 @@ To                         Action      From
 - Select UTC
 
 # Reboot!
-After initial configuration, it would be a good idea to reboot:
+*After initial configuration, it would be a good idea to reboot the system:*
 - Run `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
 - Run `reboot` 
 
 - Login with ssh
   `ssh < user >@< server-IP > -p 2222 -i ~/.ssh/< rsa-file-name >`
-#### In your browser, go to the serveralias you defined in catalog.conf and enjoy!
+#### In your browser, go to the server name/alias you defined in catalog.conf and enjoy!
