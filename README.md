@@ -1,4 +1,4 @@
-# FSND-Linux-Server-Configuration
+# A FSND Linux cerver configuration project
 
 ## This readme is a guide to deploying your own instance of my [Item Catalog](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
 
@@ -62,6 +62,7 @@ exit (until current user is root)
   - Change the line `PermitRootLogin yes` to `PermitRootLogin no`
   
   - Change the line `PasswordAuthentication yes` to `PasswordAuthentication no`
+  - Change the line `Port 22` to `Port 2222`
   - Save and exit
 - Run `sudo service ssh restart`
 
