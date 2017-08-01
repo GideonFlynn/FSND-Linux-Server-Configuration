@@ -170,7 +170,7 @@ application.secret_key = 'Add your secret key'
 Save and exit
 
 Run `cd /var/www/flaskapps/catalog`
-**Then we want to make sure the folder /var/www/flaskapps/catalog/static/uploads/images is present.**
+**Then we want to make sure the /flaskapps/catalog/static/uploads/images folder is present.**
 
 If not:
 ```bash
