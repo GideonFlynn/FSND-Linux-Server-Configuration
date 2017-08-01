@@ -2,7 +2,8 @@
 
 ## This readme is a guide to deploying your own instance of my [Item Catalog](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
 
-My instance is located [gideonservice.me](gideonservice.me), the IP address is 46.101.150.121 and the ssh key & password for grader is given at project submission.
+My instance is located [gideonservice.me](http://gideonservice.me/), the IP address is 46.101.150.121.
+The ssh key for grader is given at project submission.
 
 First, I made sure that ItemCatalog would run with PostgreSQL, to do that I read the documentation at SQLAlchemy, Flask, PostgreSQL, and psycopg2. The changes needed to be made weren't that big: 
 - Change all 'NVARCHAR' columns to 'Text'
