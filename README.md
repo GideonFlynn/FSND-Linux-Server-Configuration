@@ -88,6 +88,8 @@ sudo apt-get -y upgrade
 sudo apt-get -y autoremove
 sudo a2enmod wsgi
 ```
+**To confirm everything is working as it should so far, go to your servers ip-address and see if the default apache page is displaying, if nothing displays, install apache2 and libapache2-mod-wsgi again, then see. If nothing still shows up, start over.**
+
 ## Setting up PostgreSQL
 ```bash
 sudo su postgres
@@ -177,17 +179,18 @@ If not:
 ```bash
 cd /static
 sudo mkdir uploads
-cd uploads
+cd /uploads
 sudo mkdir images
 cd /var/www/flaskapps/catalog
 ```
-If the folder is present:
+**If/when the folder is present:**
 ```bash
 cd /var/www/flaskapps/catalog
 sudo chmod 777 -R static/
 sudo service apache2 restart
 ```
-# Setting up The Uncomplicated Firewall a.k.a ufw
+## Setting up The Uncomplicated Firewall a.k.a ufw
+_We waited with configuring the firewall until now, so we're sure to be able to log in even if something goes wrong._
 ```bash
 sudo ufw status
 sudo ufw default deny incoming
