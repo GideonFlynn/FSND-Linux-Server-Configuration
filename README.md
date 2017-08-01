@@ -1,31 +1,34 @@
-# A FSND Linux server configuration project
+# An FSND Linux server configuration project
 
-My instance is located [gideonservice.me](http://gideonservice.me/), with IP address 46.101.150.121.
+My instance is located at [gideonservice.me](http://gideonservice.me/), with IP address 46.101.150.121.
+
 The ssh key for grader is given at project submission.
 
 ## This readme is a guide to deploying your own instance of the [ItemCatalog-FSND project](https://github.com/GideonFlynn/ItemCatalog-FSND) on DigitalOcean.
 
-First, I needed to make sure the app would run with PostgreSQL. The changes to be made weren't that big: 
-1. Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
-2. Make sure that all paths are absolute and configured for a Linux OS 
-3. Make sure the items table's foreign keys references unique columns
-    - Before the shop and manufacturer tables had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name'
-    
-    **This means that when defining a manufacturer when making an item, you type their name.**
+First, I needed to be certain the app would run with PostgreSQL.
 
-4. Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
+The adjustments needed to be made weren't that large: 
+1. Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
+2. Make sure all paths are absolute and configured for a Linux OS
+3. Make sure the items table's foreign keys reference unique columns
+    - Before the shop and manufacturer tables had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name'
+   
+    **This means that when specifying a manufacturer when creating an item, you type their name.**
+
+4. Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app
 
     - When the database and user had been made, the last step was:
 
 5. Changing `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`
 
-_This was a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly._
+_This was a great time to test everything in the app and make sure nothing was broken. As you'd hope no breaking changes had been made and everything runs smoothly._
 
 -------- 
-_The following guide assumes you are redirecting your DNS provider's name servers to DigitalOcean_
+_The following guide assumes you are redirecting your DNS provider's name servers to DigitalOcean._
 
-Setting up DNS on DigitaOcean is as simple as:
-- Going to the network tab
+Setting up DNS on DigitaOcean is done as follows:
+- Go to the network tab
 - Enter the domain
 - Declare your favorite DNS records, mine are:
   - **A** record to gideonservice.me
@@ -33,7 +36,7 @@ Setting up DNS on DigitaOcean is as simple as:
   - **NS** records to DigitalOcean
 # Setting up a DigitalOcean Server
 
-Go to digitalocean.com and create a droplet with Ubuntu 14.04, wait for it to deploy.
+Go to digitalocean.com and create a droplet with Ubuntu 14.04 and wait for it to deploy.
 ### Configuring authorization
 - Open a bash terminal locally
   - On Windows: install git and use git-bash
@@ -95,7 +98,7 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y autoremove
 ```
-**To confirm everything is working as it should so far: go to your browser, enter your servers IP-address and see if the default apache page is there. If nothing displays, run above commands again. If nothing still shows up you should start over.**
+**To confirm everything is working as it should so far: go to your browser, enter your servers IP-address and see if the default apache page is there. If nothing displays, run above commands again. If you still don't receive anything you should start over.**
 
 ## Setting up PostgreSQL
 ```bash
@@ -199,7 +202,7 @@ sudo chmod 777 -R static/
 sudo service apache2 restart
 ```
 ## Setting up The Uncomplicated Firewall a.k.a ufw
-_We waited with configuring the firewall until now, so we're sure to be able to log in even if something goes wrong._
+_We waited to configure the firewall until now, so we're certain to be able to log in even if something goes wrong._
 ```bash
 sudo ufw status
 sudo ufw default deny incoming
