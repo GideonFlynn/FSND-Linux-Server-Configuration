@@ -1,23 +1,23 @@
-# A FSND Linux cerver configuration project
+# A FSND Linux server configuration project
 
-## This readme is a guide to deploying your own instance of my [Item Catalog](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
-
-My instance is located [gideonservice.me](http://gideonservice.me/), the IP address is 46.101.150.121.
+My instance is located [gideonservice.me](http://gideonservice.me/), with IP address 46.101.150.121.
 The ssh key for grader is given at project submission.
 
-First, I made sure that ItemCatalog would run with PostgreSQL, to do that I read the documentation at SQLAlchemy, Flask, PostgreSQL, and psycopg2. The changes needed to be made weren't that big: 
-- Change all 'NVARCHAR' columns to 'Text'
+## This readme is a guide to deploying your own instance of my [ItemCatalog-FSND project](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
+
+First, I needed to make sure the app would run with PostgreSQL. The changes needed to be made weren't that big: 
+- Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
 - Make sure that all paths are absolute and configured for a Linux OS 
-- Make sure the items table's foreign keys reference unique columns.
+- Make sure the items table's foreign keys references unique columns.
   
-  - Before both shop and manufacturer had a foreign key on 'id', now the foreign key for manufacturer is 'name')
+  - Before both the shop and manufacturer table had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name')
 
 **This means that when defining a manufacturer when making an item, you type their name.**
 
 Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
 
 When the database and user had been made, the last step was:
-- Change `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`.
+- Changing `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`.
 
 #### The app now works with PostgreSQL
 
