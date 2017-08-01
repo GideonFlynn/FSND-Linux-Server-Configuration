@@ -218,7 +218,7 @@ To                         Action      From
 Simply run `sudo dpkg-reconfigure tzdata` select 'None of these' with your arrow keys, then select UTC
 
 # Reboot!
-After all of this, it would be a good idea to run `apt-get update` and `apt-get -y dist-upgrade`.
+After all of this, it would be a good idea to run `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
 
 - Run `reboot` 
 - Login as < user > again
