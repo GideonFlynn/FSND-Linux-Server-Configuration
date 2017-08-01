@@ -9,10 +9,9 @@ First, I needed to make sure the app would run with PostgreSQL. The changes to b
 1. Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
 2. Make sure that all paths are absolute and configured for a Linux OS 
 3. Make sure the items table's foreign keys references unique columns.
-  
-  - _Before the shop and manufacturer tables had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name'_
-
-  **This means that when defining a manufacturer when making an item, you type their name.**
+    - _Before the shop and manufacturer tables had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name'_
+    
+    **This means that when defining a manufacturer when making an item, you type their name.**
 
 4. Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
 
