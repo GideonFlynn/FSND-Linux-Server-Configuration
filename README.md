@@ -118,7 +118,7 @@ sudo virtualenv venv
 source venv/bin/activate 
 sudo pip install -r requirements.txt
 ```
-_If you wish to remove the unused files run these commands:_
+_To remove the unused files (and the .git directory), run these commands:_
 ```bash
 cd /var/www/flaskapps/
 sudo rm -r -f ItemCatalog-FSND/
@@ -178,6 +178,7 @@ Save and exit
 
 Run `cd /var/www/flaskapps/catalog`
 **Then we want to make sure the folder /var/www/flaskapps/catalog/static/uploads/images is present.**
+
 If not:
 ```bash
 cd /static
