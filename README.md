@@ -118,6 +118,11 @@ sudo virtualenv venv
 source venv/bin/activate 
 sudo pip install -r requirements.txt
 ```
+_If you wish to remove the unused files run these commands:_
+```bash
+cd /var/www/flaskapps/
+sudo rm -r -f ItemCatalog-FSND/
+```
 ### Setting up a virtual environment for Python
 ```bash
 cd var/www/flaskapps/catalog
@@ -222,11 +227,8 @@ To                         Action      From
 # Reboot!
 After initial configuration, it would be a good idea to reboot:
 - Run `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
-- Then `reboot` 
-- Login as < user > again
-```
-sudo apache2ctl restart
-cd /var/www/flaskapps/
-sudo rm -r -f ItemCatalog-FSND/
-```
+- Run `reboot` 
+
+- Login with ssh
+  `ssh < user >@< server-IP > -p 2222 -i ~/.ssh/< rsa-file-name >`
 #### In your browser, go to the serveralias you defined in catalog.conf and enjoy!
