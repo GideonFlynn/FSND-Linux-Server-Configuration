@@ -22,7 +22,7 @@ First, I needed to make sure the app would run with PostgreSQL. The changes to b
 _This was a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly._
 
 -------- 
-_The following guide assumes you are redicreting your DNS-provider's nameservers to DigitalOcean_
+_The following guide assumes you are redirecting your DNS provider's name servers to DigitalOcean_
 
 Setting up DNS on DigitaOcean is as simple as:
 - Going to the network tab
@@ -95,7 +95,7 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y autoremove
 ```
-**To confirm everything is working as it should so far: go to your browser, enter your servers ip-address and see if the default apache page is there. If nothing displays, run above commands again. If nothing still shows up you should start over.**
+**To confirm everything is working as it should so far: go to your browser, enter your servers IP-address and see if the default apache page is there. If nothing displays, run above commands again. If nothing still shows up you should start over.**
 
 ## Setting up PostgreSQL
 ```bash
