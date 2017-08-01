@@ -3,16 +3,16 @@
 ## This readme is a guide to deploying your own instance of my [Item Catalog](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
 
 
-First, I made sure that ItemCatalog would run with postgreSQL, to do that i read documentation at SQLAlchemy, Flask, PostgreSQL and psycopg2. The changes needed to be made weren't that big: 
+First, I made sure that ItemCatalog would run with PostgreSQL, to do that I read the documentation at SQLAlchemy, Flask, PostgreSQL, and psycopg2. The changes needed to be made weren't that big: 
 - Change all 'NVARCHAR' columns to 'Text'
 - Make sure that all paths are absolute and configured for a Linux OS 
 - Make sure the items table's foreign keys reference unique columns.
   
-  - Before, both shop and manufacturer had a foreign key on 'id', now the foreign key for manufacturer is 'name')
+  - Before both shop and manufacturer had a foreign key on 'id', now the foreign key for manufacturer is 'name')
 
 **This means that when defining a manufacturer when making an item, you type their name.**
 
-Another change to be made was setting up a postgres user and database, both named catalog, to enable testing of the app.
+Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
 
 When the database and user had been made, the last step was:
 - Change `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`.
@@ -37,7 +37,7 @@ adduser <user>
 gpasswd -a <user> sudo
 ```
 
-  -  < user > can run commands with sudo priviliges now!
+  -  < user > can run commands with sudo privileges now!
 
 
 - Locally run `ssh-keygen`, name the key by saving it to your default .ssh directory
@@ -92,7 +92,7 @@ createuser --interactive -W -P <db-username>
 createdb -O <db-owner> <db-name>
 exit
 ```
-Whenever you make a change to the configuration of most services in Linux, you will have to restart them for the change to take effect. For now use these commands:
+Whenever you make a change to the configuration of most services in Linux, you will have to restart them for the change to take effect. For now, use these commands:
 
 - `sudo service postgresql restart`
 
@@ -172,7 +172,7 @@ If not:
 ```bash
 cd /static
 sudo mkdir uploads
-cd oploads
+cd uploads
 sudo mkdir images
 cd /var/www/flaskapps/catalog
 ```
@@ -209,7 +209,7 @@ To                         Action      From
 80/tcp (v6)                ALLOW       Anywhere (v6)
 123 (v6)                   ALLOW       Anywhere (v6)
 ```
-# Configuring the timezone 
+# Configuring the time zone 
 Simply run `sudo dpkg-reconfigure tzdata` select 'None of these' with your arrow keys, then select UTC
 
 # Reboot!
