@@ -6,18 +6,18 @@ The ssh key for grader is given at project submission.
 ## This readme is a guide to deploying your own instance of my [ItemCatalog-FSND project](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
 
 First, I needed to make sure the app would run with PostgreSQL. The changes to be made weren't that big: 
-1 Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
-2 Make sure that all paths are absolute and configured for a Linux OS 
-3 Make sure the items table's foreign keys references unique columns.
+1. Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
+2. Make sure that all paths are absolute and configured for a Linux OS 
+3. Make sure the items table's foreign keys references unique columns.
   
   - Before both the shop and manufacturer table had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name')
 
 **This means that when defining a manufacturer when making an item, you type their name.**
 
-4 Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
+4. Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
 
 When the database and user had been made, the last step was:
-5 Changing `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`.
+5. Changing `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`.
 
 #### The app now works with PostgreSQL
 
