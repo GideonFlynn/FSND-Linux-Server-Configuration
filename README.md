@@ -49,7 +49,7 @@ inside the sudoers.d/grader change the word `root` to `< user >`
 
 **On the server as root user**
 ```bash
-su < use >
+su < user >
 cd  /home/< user >
 mkdir .ssh
 sudo nano .ssh/authorized_keys
