@@ -33,27 +33,27 @@ Go to digitalocean.com and create a droplet with Ubuntu 14.04, wait for it to de
 - Copy the temporary password from the email you received at droplet creation
 ```bash
 ssh root@servername
-<temporary password>
-adduser <user>
-gpasswd -a <user> sudo
+< temporary password>
+adduser < user >
+gpasswd -a < user > sudo
 sudo cp /etc/sudoers.d/90-cloud-initusers /etc/sudoers.d/grader
 sudo nano /etc/sudoers.d/grader
 ```
-inside the sudoers.d/grader change the word `root` to `<user>`
-  -  <user> can run commands with sudo privileges now!
+inside the sudoers.d/grader change the word `root` to `< user >`
+  -  < user > can run commands with sudo privileges now!
 
 
 - Locally run `ssh-keygen`, name the key by saving it to your default .ssh directory
-- Locally run `cat ~/.ssh/<rsa-key-name>.pub` and copy it
+- Locally run `cat ~/.ssh/< rsa-key-name >.pub` and copy it
 
 **On the server as root user**
 ```bash
-su <user>
-cd  /home/<user>
+su < use >
+cd  /home/< user >
 mkdir .ssh
 sudo nano .ssh/authorized_keys
 ```
-(Paste the contents of <rsa-key-name>.pub then save and exit)
+(Paste the contents of < rsa-key-name >.pub then save and exit)
 ```bash
 sudo chmod 644 .ssh/authorized_keys
 sudo chmod 700 .ssh
@@ -69,9 +69,9 @@ exit (until current user is root)
   - Save and exit
 - Run `sudo service ssh restart`
 
-### Logging in as <user>
+### Logging in as < user >
 
-Locally, open bash and run `ssh <user>@<server-IP> -p 2222 -i ~/.ssh/<rsa-key-name>`
+Locally, open bash and run `ssh < user >@< server-IP > -p 2222 -i ~/.ssh/< rsa-key-name >`
 
 # Software installation
 Run the following commands:
@@ -92,8 +92,8 @@ sudo a2enmod wsgi
 ## Setting up PostgreSQL
 ```bash
 sudo su postgres
-createuser --interactive -W -P <db-username>
-createdb -O <db-owner> <db-name>
+createuser --interactive -W -P < db-username >
+createdb -O < db-owner > < db-name >
 exit
 ```
 Whenever you make a change to the configuration of most services in Linux, you will have to restart them for the change to take effect. For now, use these commands:
@@ -133,9 +133,9 @@ Now we'll enable the app, first:
 Then paste the following code into catalog.conf
 ```
 <VirtualHost *:80>
-                ServerName <server-IP>
-                ServerAlias <DNS>
-                ServerAdmin <admin-email@example.com>
+                ServerName < server-IP >
+                ServerAlias < DNS >
+                ServerAdmin < admin-email@example.com >
                 WSGIScriptAlias / /var/www/flaskapps/catalog.wsgi
                 <Directory /var/www/flaskapps/catalog/>
                         Order allow,deny
@@ -220,7 +220,7 @@ Simply run `sudo dpkg-reconfigure tzdata` select 'None of these' with your arrow
 After all of this, it would be a good idea to run `apt-get update` and `apt-get upgrade` again.
 
 - Run `reboot` 
-- Login as <user> again
+- Login as < user > again
 - Run `sudo apache2ctl restart`
 - Run  `cd /var/www/flaskapps/`
 - Run `sudo rm -r -f ItemCatalog-FSND/`
