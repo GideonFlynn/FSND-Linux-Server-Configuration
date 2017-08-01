@@ -74,7 +74,7 @@ exit (until current user is root)
 
 Locally, open bash and run `ssh < user >@< server-IP > -p 2222 -i ~/.ssh/< rsa-key-name >`
 
-# Software installation
+## Software installation
 Run the following commands:
 ```bash
 sudo apt-get -y update
@@ -152,13 +152,13 @@ Then paste the following code into catalog.conf
 </VirtualHost>
 ```
 Save and exit
-# Configuring the wsgi
+# Configuring the WSGI
 ```bash
 sudo a2ensite catalog
 cd /var/www/flaskapps/
 sudo nano catalog.wsgi
 ```
-Paste the following code into /var/www/flaskapps/catalog.wsgi
+**Paste the following code into /var/www/flaskapps/catalog.wsgi**
 ```python
 #!/usr/bin/python
 import sys
@@ -172,7 +172,7 @@ application.secret_key = 'Add your secret key'
 Save and exit
 
 Run `cd /var/www/flaskapps/catalog`
-Then we want to make sure the folder /var/www/flaskapps/catalog/static/uploads/images is present.
+**Then we want to make sure the folder /var/www/flaskapps/catalog/static/uploads/images is present.**
 If not:
 ```bash
 cd /static
@@ -215,10 +215,13 @@ To                         Action      From
 123 (v6)                   ALLOW       Anywhere (v6)
 ```
 # Configuring the time zone 
-Simply run `sudo dpkg-reconfigure tzdata` select 'None of these' with your arrow keys, then select UTC
+- Run `sudo dpkg-reconfigure tzdata`
+- Select 'None of these' with your arrow keys
+- Select UTC
 
 # Reboot!
-After all of this, it would be a good idea to run `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
+After initial configuration, it would be a good idea to run
+- `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
 
 - Run `reboot` 
 - Login as < user > again
