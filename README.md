@@ -22,7 +22,7 @@ First, I needed to make sure the app would run with PostgreSQL. The changes to b
 _This was a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly._
 
 -------- 
-_The following guide assumes you are redicreting your DNS-providers nameservers to DigitalOcean_
+_The following guide assumes you are redicreting your DNS-provider's nameservers to DigitalOcean_
 Setting up the DNS on DigitaOcean is as simple as:
 - Going to the network tab
 - Enter the domain
