@@ -26,10 +26,10 @@ _The following guide assumes you are redicreting your DNS-provider's nameservers
 Setting up the DNS on DigitaOcean is as simple as:
 - Going to the network tab
 - Enter the domain
-- Declare your favorite DNS records
-  - A record to gideonservice.me
-  - CNAME record Make any prefix redirect to gideonservice.me
-  - NS records to DigitalOcean
+- Declare your favorite DNS records, mine are:
+  - **A** record to gideonservice.me
+  - **CNAME** record to make any prefix redirect to gideonservice.me
+  - **NS** records to DigitalOcean
 # Setting up a DigitalOcean Server
 
 Go to digitalocean.com and create a droplet with Ubuntu 14.04, wait for it to deploy.
