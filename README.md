@@ -2,15 +2,15 @@
 
 ## This readme is a guide to deploying your own instance of my [Item Catalog](https://github.com/GideonFlynn/ItemCatalog-FSND) project on DigitalOcean.
 
---------
 
 First, I made sure that ItemCatalog would run with postgreSQL, to do that i read documentation at SQLAlchemy, Flask, PostgreSQL and psycopg2. The changes needed to be made weren't that big: 
 - Change all 'NVARCHAR' columns to 'Text'
-- Make sure that `Items` in dbmodel.py reference unique columns. 
+- Make sure that all paths are absolute and configured for a Linux OS 
+- Make sure the items table's foreign keys reference unique columns.
   
-  - Before, both shop and manufacturer had a primary key of id, now the primary id of manufacturer is the name)
+  - Before, both shop and manufacturer had a foreign key on 'id', now the foreign key for manufacturer is 'name')
 
-**This means that instead of typing a number when defining a manufacturer, you type their name.**
+**This means that when defining a manufacturer when making an item, you type their name.**
 
 Another change to be made was setting up a postgres user and database, both named catalog, to enable testing of the app.
 
@@ -19,7 +19,7 @@ When the database and user had been made, the last step was:
 
 #### The app now works with PostgreSQL
 
-This is a great time to test everything in the app and make sure nothing breaks. As you'd hope,no breaking changes have been made and everything runs smoothly.
+This is a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly.
 
 -------- 
 
