@@ -8,7 +8,7 @@ The ssh key for grader is given at project submission.
 First, I needed to make sure the app would run with PostgreSQL. The changes to be made weren't that big: 
 1. Change all 'NVARCHAR' columns in dbmodels.py to 'Text'
 2. Make sure that all paths are absolute and configured for a Linux OS 
-3. Make sure the items table's foreign keys references unique columns.
+3. Make sure the items table's foreign keys references unique columns
     - (Before the shop and manufacturer tables had a foreign key on their 'id' column, now the foreign key for manufacturer is 'name')
     
     **This means that when defining a manufacturer when making an item, you type their name.**
@@ -16,8 +16,9 @@ First, I needed to make sure the app would run with PostgreSQL. The changes to b
 4. Another change to be made was setting up a Postgres user and database, both named catalog, to enable testing of the app.
 
 When the database and user had been made, the last step was:
-5. Changing `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`.
 
+5. Changing `create_engine()` in catalog.py & dbmodels.py to `postgresql://catalog:catalog@localhost/catalog`
+----- 
 #### The app now works with PostgreSQL
 
 This is a great time to test everything in the app and make sure nothing breaks. As you'd hope no breaking changes have been made and everything runs smoothly.
