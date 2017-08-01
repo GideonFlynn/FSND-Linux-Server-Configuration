@@ -224,9 +224,9 @@ After initial configuration, it would be a good idea to reboot:
 - Run `sudo apt-get update` and `sudo apt-get -y dist-upgrade`.
 - Then `reboot` 
 - Login as < user > again
-  ```
-sudo apache2ctl restart
-cd /var/www/flaskapps/
-sudo rm -r -f ItemCatalog-FSND/
-  ```
+```
+  sudo apache2ctl restart
+  cd /var/www/flaskapps/
+  sudo rm -r -f ItemCatalog-FSND/
+```
 #### In your browser, go to the serveralias you defined in catalog.conf and enjoy!
