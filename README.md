@@ -1,6 +1,6 @@
 # An FSND Linux server configuration project
 
-My instance is located at [gideonservice.me](http://gideonservice.me/), with IP address 46.101.150.121.
+My instance is located at [gideonservice.me](http://gideonservice.me/) @ IP address 46.101.150.121.
 
 The ssh key for grader is given at project submission.
 
