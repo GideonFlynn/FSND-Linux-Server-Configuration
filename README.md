@@ -2,7 +2,7 @@
 
 My instance is located at [gideonservice.me](http://gideonservice.me/) @ IP address 46.101.150.121.
 
-The ssh key for grader is given at project submission.
+The ssh key for the only proper user is given at project submission.
 
 ## This readme is a guide to deploying your own instance of the [ItemCatalog-FSND project](https://github.com/GideonFlynn/ItemCatalog-FSND) on DigitalOcean.
 
