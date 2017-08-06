@@ -148,13 +148,13 @@ cd /var/www/
 sudo mkdir flaskapps
 sudo cd /flaskapps
 sudo mkdir catalog
-sudo git clone https://github.com/GideonFlynn/ItemCatalog-FSND.git
-sudo mv /ItemCatalog-FSND/* /catalog/
+sudo git clone https://github.com/GideonFlynn/Item-Catalog.git
+sudo mv /Item-Catalog/* /catalog/
 ```
 _To remove unused files/folders (and the .git folder), run these commands:_
 ```bash
 cd /var/www/flaskapps/
-sudo rm -r -f ItemCatalog-FSND/
+sudo rm -r -f Item-Catalog/
 ```
 ### Setting up a virtual environment for Python
 ```bash
