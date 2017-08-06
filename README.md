@@ -10,6 +10,8 @@ The catalog's built with PostgreSQL & Flask;
 - It's protected against malicious actions and has rate-limiting - made possible by using Redis
 - Has it's own API
 
+_____
+
 First, I needed to be certain the app would run with PostgreSQL.
 
 The adjustments needed to be made weren't that large: 
