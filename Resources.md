@@ -7,7 +7,7 @@ didn't know what commands to use, etc. I would search:
   - Stack Overflow
   - Google
 
-In some cases, I look at the actual code and comments therein, to get a better perception of how they work.
+In some cases, I look at the actual code and the comments, to get a better perception of how they work.
 
 ## General links
 - [The life-cycle of Ubuntu 14.04](https://www.ubuntu.com/info/release-end-of-life)
