@@ -1,7 +1,7 @@
 # Linux server configuration bibliography
 
 ## Man pages
-If I wasn't able to figure a solution by reading the man pages, 
+If I weren't able to figure a solution by reading the man pages, 
 didn't know what commands to use, etc. I would:
 Search the documentation of the codebase in use. 
 Then, if that didn't clarify enough; Stack Overflow and finally Google.
