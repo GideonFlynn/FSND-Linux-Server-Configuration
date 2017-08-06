@@ -2,9 +2,10 @@
 
 ## Man pages
 If I weren't able to figure a solution by reading the man pages, 
-didn't know what commands to use, etc. I would:
-- Search the documentation of the codebase in use. 
-- If that didn't clarify enough; Stack Overflow and finally Google.
+didn't know what commands to use, etc. I would search:
+- The documentation of the codebase in use 
+  - Stack Overflow
+  - Google
 
 In some cases, I look at the actual code and comments therein, to get a better perception of how they work.
 
