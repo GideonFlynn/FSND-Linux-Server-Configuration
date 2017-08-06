@@ -7,7 +7,6 @@ The catalog's built with PostgreSQL & Flask;
 - SQLAlchemy to connect Python with PSQL;
 - Jinja as templating engine
 - OAuth2 as user authentication/registration
-- It's protected against malicious actions and has rate-limiting - made possible by using Redis
 - Has it's own API
 
 _____
