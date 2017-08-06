@@ -2,7 +2,13 @@
 
 My instance is located at [gideonservice.me](http://gideonservice.me/) @ IP address 46.101.150.121.
 
-## This readme is a guide to deploying an instance of [an 'Item Catalog' WSGI app](https://github.com/GideonFlynn/ItemCatalog-FSND) on DigitalOcean.
+## This readme is an example to create an instance of a WSGI app with DigitalOcean.
+The catalog's built with PostgreSQL & Flask;
+- SQLAlchemy to connect Python with PSQL;
+- Jinja as templating engine
+- OAuth2 as user authentication/registration
+- It's protected against malicious actions and has rate-limiting - made possible by using Redis
+- Has it's own API
 
 First, I needed to be certain the app would run with PostgreSQL.
 
