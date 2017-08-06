@@ -2,7 +2,7 @@
 
 My instance is located at [gideonservice.me](http://gideonservice.me/) @ IP address 46.101.150.121.
 
-## This readme is an example to create an instance of a WSGI app with DigitalOcean.
+## This readme is a tutorial on how to create an instance of a WSGI Python app with DigitalOcean.
 The catalog's built with PostgreSQL & Flask;
 - SQLAlchemy to connect Python with PSQL;
 - Jinja as templating engine
