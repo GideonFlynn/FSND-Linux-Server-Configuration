@@ -236,7 +236,6 @@ _We waited to configure the firewall until now, so we're certain to be able to l
 sudo ufw status
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow ssh
 sudo ufw allow 2222/tcp
 sudo ufw allow www
 sudo ufw allow ntp
