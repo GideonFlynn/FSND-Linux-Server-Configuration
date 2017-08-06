@@ -107,9 +107,31 @@ sudo apt-get -y autoremove
 **To confirm everything is working as it should so far: go to your browser, enter your servers IP-address and see if the default apache page is there. If nothing displays, run above commands again. If you still don't receive anything you should start over.**
 
 ## Setting up PostgreSQL
+### Securing the connection
+Make sure no remote connections are allowed by looking in the host based authentication file:
+```bash
+sudo nano /etc/postgresql/9.3/main/pg_hba.conf
+```
+Check if the following text matches the bottom of the file:
+```
+# Database administrative login by Unix domain socket
+local   all             postgres                                peer
+
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+```
+Anything else in this section of the config file should be deleted.
+
+### Create a database with an unauthorized user
 ```bash
 sudo su postgres
-createuser --interactive -W -P < DB-username >
+createuser --interactive -W -P < DB-username > (catalog no no no catalog catalog)
 createdb -O < DB-owner > < DB-name >
 exit
 ```
@@ -118,6 +140,7 @@ Whenever you make a change to the configuration of most services in Linux, you w
 - `sudo service postgresql restart`
 
 - `sudo service ssh restart`
+----
 
 ## Download and configure the application
 *This is assuming apache2 is installed properly.*
