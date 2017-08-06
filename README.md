@@ -2,9 +2,7 @@
 
 My instance is located at [gideonservice.me](http://gideonservice.me/) @ IP address 46.101.150.121.
 
-The ssh key for the only proper user is given at project submission.
-
-### This readme is a guide to deploying your own instance of the [FSND 'Item Catalog' project](https://github.com/GideonFlynn/ItemCatalog-FSND) on DigitalOcean.
+## This readme is a guide to deploying an instance of [an 'Item Catalog' WSGI app](https://github.com/GideonFlynn/ItemCatalog-FSND) on DigitalOcean.
 
 First, I needed to be certain the app would run with PostgreSQL.
 
