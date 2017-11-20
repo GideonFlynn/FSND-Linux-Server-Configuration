@@ -1,7 +1,5 @@
 # An FSND Linux server configuration project
 
-My instance is located on [this domain](http://www.gideonservice.me/) @ IP address 46.101.150.121.
-
 ## This readme is a tutorial on how to create an instance of a WSGI Apache server with DigitalOcean and host a Python app.
 The catalog's built with PostgreSQL & Flask;
 - Utilizes mod_wsgi
